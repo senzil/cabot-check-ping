@@ -93,7 +93,7 @@ class PingStatusCheck(StatusCheck):
             if r['packet_loss'] > 0.0:
                 raise Exception("%0.1f%% packet loss" % r['packet_loss'])
             elif self.max_rtt and r['rtt']['avg'] > self.max_rtt:
-                raise Exception("Maximum avergage RTT reached: %s" % r['rtt']['avg'])
+                raise Exception("Maximum average RTT reached: %s" % r['rtt']['avg'])
         except subprocess.CalledProcessError as e:
             result.succeeded = False
             result.error = e.output
