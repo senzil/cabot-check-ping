@@ -4,7 +4,7 @@ import subprocess
 from django.core.validators import MinValueValidator
 from django.db import models
 
-from cabot.cabotapp.models import StatusCheck, StatusCheckResult
+from cabot3.cabotapp.models import StatusCheck, StatusCheckResult
 
 
 RE_MATCH_STATS = re.compile(r'^(?P<tx>[0-9]+) [^,]+, ' +
